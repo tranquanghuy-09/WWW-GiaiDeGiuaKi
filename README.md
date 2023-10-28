@@ -1,10 +1,8 @@
 # DE 01 & DE 02 Completion
 This repository contains the solutions for DE 01 and DE 02 by Tran Quang Huy.
 
-## DE 01 - STT01_20092731_Tran Quang Huy
 [DE 01 GitHub Repository](https://github.com/tranquanghuy-09/WWW-GiaiDeGiuaKi/tree/main/01_20092731_TranQuangHuy/STT01_20092731_TranQuangHuy)
 
-## DE 02 - STT02_20092731_Tran Quang Huy
 [DE 02 GitHub Repository](https://github.com/tranquanghuy-09/WWW-GiaiDeGiuaKi/tree/main/01_20092731_TranQuangHuy/STT02_20092731_TranQuangHuy)
 
 ## Candidate List
