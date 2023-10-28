@@ -1,6 +1,6 @@
 # Complete DE 01 & DEe 02
-## STT01_20092731_Tran Quang Huy -> DE 01
-## STT02_20092731_Tran Quang Huy -> DE 02
+## STT01_20092731_Tran Quang Huy -> DE 01 (https://github.com/tranquanghuy-09/WWW-GiaiDeGiuaKi/tree/main/01_20092731_TranQuangHuy/STT01_20092731_TranQuangHuy)
+## STT02_20092731_Tran Quang Huy -> DE 02 (https://github.com/tranquanghuy-09/WWW-GiaiDeGiuaKi/tree/main/01_20092731_TranQuangHuy/STT02_20092731_TranQuanghuy)
 ### Candidate List
 ![Alt text](image/Candidate_List.png "Candidate List")
 ### Candidate Detail
