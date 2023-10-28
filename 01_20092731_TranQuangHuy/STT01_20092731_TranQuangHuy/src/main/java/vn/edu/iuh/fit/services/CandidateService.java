@@ -26,4 +26,7 @@ public class CandidateService {
     public List<Candidate> getCandidatesUseGmail(){
         return candidateRepository.getCandidatesUseGmail();
     }
+    public boolean updateCandidate(Candidate candidate){
+        return candidateRepository.updateCandidate(candidate);
+    }
 }

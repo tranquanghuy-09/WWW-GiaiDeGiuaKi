@@ -1,20 +1,18 @@
-<%@ page import="vn.edu.iuh.fit.entities.Candidate" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="vn.edu.iuh.fit.entities.Candidate" %><%--
   Created by IntelliJ IDEA.
   User: tranquanghuyit09
-  Date: 26/10/2023
-  Time: 21:45
+  Date: 28/10/2023
+  Time: 13:54
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    Object obj_candidates = session.getAttribute("candidates");
-    List<Candidate> candidateList = (List<Candidate>) obj_candidates;
+    Object obj_candidate = session.getAttribute("candidate");
+    Candidate candidate = (Candidate) obj_candidate;
 %>
-
 <html>
 <head>
-    <title>Candidates</title>
+    <title>Candidate Detail</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -47,42 +45,27 @@
     </ul>
 </nav>
 
-<div class="container mt-5">
-    <h2>Candidates</h2>
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>Candidate ID</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Candidate Detail</th>
-            <th>Function</th>
-        </tr>
-        </thead>
-        <tbody>
-        <%
-            for(Candidate candidate : candidateList){
-        %>
-        <tr>
-            <td><%= candidate.getId()%></td>
-            <td><%= candidate.getFullName()%></td>
-            <td><%= candidate.getEmail()%></td>
-            <td><%= candidate.getPhone()%></td>
-            <td>
-                <a href="control-servlet?action=candidate-detail&id=<%= candidate.getId()%>">View</a>
-            </td>
-            <td>
-                <a href="control-servlet?action=view-update-candidate&id=<%= candidate.getId()%>">Update</a>
-            </td>
-        </tr>
-        <%
-            }
-        %>
-        </tbody>
-    </table>
+<div class="container col-4 mx-auto mt-5">
+    <h2>Candidate Detail</h2>
+    <form action="" class="mt-5">
+        <div class="form-group">
+            <label for="id">Candidate ID:</label>
+            <input type="text" class="form-control" id="id" value="<%=candidate.getId()%>" >
+        </div>
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" class="form-control" id="fullname" value="<%=candidate.getFullName()%>" >
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" value="<%=candidate.getId()%>" >
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" class="form-control" id="phone" value="<%=candidate.getPhone()%>" >
+        </div>
+    </form>
 </div>
-
 
 </body>
 </html>

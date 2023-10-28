@@ -11,6 +11,7 @@ import java.util.List;
         @NamedQuery(name = "Candidate.getCandidateById", query = "from Candidate where id= :idFind"),
         @NamedQuery(name = "Candidate.getCandidatesByRole", query = "from Candidate c inner join Experience e on c.id=e.candidate.id where e.role = :role "),
         @NamedQuery(name = "Candidate.FilterCandidateUseGmail", query = "from Candidate c where c.email like '%@gmail%'"),
+
 })
 public class Candidate {
     @Id

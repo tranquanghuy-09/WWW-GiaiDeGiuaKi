@@ -33,6 +33,19 @@ public class CandidateRepository {
         return false;
     }
 
+    public boolean updateCandidate(Candidate candidate){
+        try {
+            tran.begin();
+            em.merge(candidate);
+            tran.commit();
+            return true;
+        }catch(Exception e){
+            tran.rollback();
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public List<Candidate> getCandidateList(){
         try{
             return em.createNamedQuery("Candidate.getListCandidate", Candidate.class).getResultList();

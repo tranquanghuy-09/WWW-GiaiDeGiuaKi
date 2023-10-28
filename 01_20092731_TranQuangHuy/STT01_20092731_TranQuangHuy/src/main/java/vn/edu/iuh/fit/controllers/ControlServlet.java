@@ -36,7 +36,21 @@ public class ControlServlet extends HttpServlet {
             case "get-candidates-use-gmail":
                 handelGetCandidatesUseGmail(req, resp);
                 break;
+            case "view-update-candidate":
+                handleViewUpdateCandidate(req, resp);
+                break;
         }
+    }
+
+    private void handleViewUpdateCandidate(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession(true);
+        long id = Long.parseLong(req.getParameter("id"));
+
+        Candidate candidate = candidateService.getCandidateById(id);
+        System.out.println(candidate);
+        session.setAttribute("candidate", candidate);
+
+        req.getRequestDispatcher("update_candidate.jsp").forward(req, resp);
     }
 
     private void handelGetCandidatesUseGmail(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
